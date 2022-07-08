@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>ProjetEncheres</display-name>
+  
+    
+  <welcome-file-list>
+ 	  <welcome-file>PageAccueil</welcome-file>  
+  </welcome-file-list>
+   <listener>
+        <listener-class>fr.eni.encheres.ListenerFinEnchere</listener-class>
+    </listener>
+  
+ 
+<servlet>
+	<servlet-name>PageAccueil</servlet-name>
+	<servlet-class>fr.eni.encheres.ServletPageAccueil</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>PageAccueil</servlet-name>
+	<url-pattern></url-pattern>
+</servlet-mapping>
+
+  
+<servlet>
+	<servlet-name>Inscription</servlet-name>
+	<servlet-class>fr.eni.encheres.ServletInscription</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Inscription</servlet-name>
+	<url-pattern>/inscription</url-pattern>
+</servlet-mapping>
+ 
+<servlet>
+	<servlet-name>Connexion</servlet-name>
+	<servlet-class>fr.eni.encheres.Login</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Connexion</servlet-name>
+	<url-pattern>/connexion</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+	<servlet-name>Utilisateur</servlet-name>
+	<servlet-class>fr.eni.encheres.ServletProfilUtilisateur</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Utilisateur</servlet-name>
+	<url-pattern>/utilisateur</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+	<servlet-name>Article</servlet-name>
+	<servlet-class>fr.eni.encheres.ServletArticle</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Article</servlet-name>
+	<url-pattern>/article</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+	<servlet-name>Logout</servlet-name>
+	<servlet-class>fr.eni.encheres.ServletLogout</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Logout</servlet-name>
+	<url-pattern>/logout</url-pattern>
+</servlet-mapping>
+
+  
+  
+
+<servlet>
+	<servlet-name>NouvelleVente</servlet-name>
+	<servlet-class>fr.eni.encheres.ServletNouvelleVente</servlet-class>
+	<multipart-config>
+            <location>"/Users/jean-/tmp"</location> <!-- A adapter chez vous -->
+            <max-file-size>10485760</max-file-size> <!-- 10 Mo -->
+            <max-request-size>52428800</max-request-size> <!-- 5 x 10 Mo -->
+            <file-size-threshold>1048576</file-size-threshold> <!-- 1 Mo -->
+    </multipart-config>
+</servlet>
+<servlet-mapping>
+	<servlet-name>NouvelleVente</servlet-name>
+	<url-pattern>/nouvelle-vente</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>Encherir</servlet-name>
+	<servlet-class>fr.eni.encheres.ServletEncherir</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Encherir</servlet-name>
+	<url-pattern>/encherir</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+	<servlet-name>Encheres</servlet-name>
+	<servlet-class>fr.eni.encheres.ServletPageEncheres</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Encheres</servlet-name>
+	<url-pattern>/les-encheres</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>ModificationEnchere</servlet-name>
+	<servlet-class>fr.eni.encheres.ServletModificationEnchere</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>ModificationEnchere</servlet-name>
+	<url-pattern>/modification-enchere</url-pattern>
+</servlet-mapping>
+  
+  
+  
+  
+  
+  
+</web-app>

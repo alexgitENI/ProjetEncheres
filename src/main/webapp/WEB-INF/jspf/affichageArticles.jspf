@@ -1,0 +1,68 @@
+<%@page import="fr.eni.encheres.bo.Utilisateur"%>
+<%@page import="fr.eni.encheres.bo.Article"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@page import="java.util.List"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<section class="produits">
+    <h2>Enchères en cours</h2>
+    <div class="containerArticles">
+      
+    
+    <!-- BASE HTML  
+        <div class="article roundRadiusNoBorder">
+            <img class="roundRadiusNoBorder" src="asset/img/téléchargement.png">
+                <div class="descriptionArticle">
+                    <h3>Nom Produit</h3>
+                    <p>vendu par <a href="#">jojo45</a> </p>
+                    <p class="prix">prix : <span>50 pts</span></p>
+                    <p class="finEnchère">fin de l'énchère: <span> 3 jours et 15h</span></p>
+                    <span>fin le <span>18/05/2022</span> </span>
+                </div>
+            
+        </div>
+       -->
+       
+       
+       
+       
+     <%
+     
+     List<Article> listeArticles = (List<Article>) request.getAttribute("listeArticle");
+     if(listeArticles != null && listeArticles.size()>0){ 
+	     for(Article article : listeArticles){
+	    	 
+	     	 
+	    	
+	  %>
+	    <div class="article roundRadiusNoBorder">
+            <img class="roundRadiusNoBorder" src="asset/img/ImgArticles/Article<%=article.getNoArticle()%>.jpg">
+                <div class="descriptionArticle">
+                    <a href="<%= request.getContextPath()%>/article?idArticle=<%= article.getNoArticle() %>"><h3><%= article.getNomArticle() %></h3></a>
+                    <p>vendu par <a href="<%= request.getContextPath() %>/utilisateur?id=<%= article.getNoVendeur()%>"><%= article.getNomVendeur() %></a> </p>
+
+                    <p class="prix">prix : <span> <%= article.getEnchere().getMontant() %>  pts</span></p>
+                    <p class="finEnchère">fin de l'énchère: <span> <%= article.getDiffDate() %></span></p>
+                    <span>fin le <span><%= article.getSTRDateFinEnchere() %></span> </span>
+                </div>
+            
+        </div>
+	    	 
+	    	 
+	 <%
+	     }
+	     }else{
+	    	 %>
+	    	 
+	    	 <p>Il n'y a pas de produit à afficher</p>
+	    	 <%
+	     }
+     %>
+
+        
+    </div>
+   
+    
+
+
+</section>

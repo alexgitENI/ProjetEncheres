@@ -1,0 +1,60 @@
+<%@page import="fr.eni.encheres.bo.Utilisateur"%>
+<%@page import="fr.eni.encheres.CookieUtils"%>
+<%@page import="java.net.URLDecoder"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+
+
+
+
+<%
+Cookie[] cookies = request.getCookies();
+if (CookieUtils.readCookie("message", cookies) != null) {
+        	%>
+<p style="color:green; text-align: center;"  ><%= CookieUtils.readCookie("message", cookies) %></p>
+        	
+ <% } %>
+
+	
+
+<header>
+
+
+    <a href="<%= request.getContextPath() %>">
+        <img src="asset/logo/Logo_eni_encheres_bleuFonce.png">
+    </a>
+
+
+
+<%
+Utilisateur user = (Utilisateur) request.getSession(false).getAttribute("connectedUser");
+if(user != null ){
+%>
+<nav id="connectedNav">
+    <a class="nav-link" href="<%= request.getContextPath() %>/les-encheres">Enchères</a>
+    <a class="nav-link" href="<%= request.getContextPath() %>/nouvelle-vente">Vendre un article</a>
+    <a class="dropdown-item" href="<%=request.getContextPath()%>/logout">Deconnexion</a>   
+    <a  class="nav-link btn-profil " href="<%= request.getContextPath() %>/utilisateur?id=<%= user.getNoUtilisateur() %>">Mon profil</a>  
+      
+</nav>
+<%}else{ %>
+
+<nav id="disconnectedNav">   
+      <a class="btn-profil" href="<%= request.getContextPath()%>/connexion">Se connecter / s'inscrire</a>
+</nav>
+<%} %>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+

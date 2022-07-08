@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+* {
+  -moz-box-sizing: inherit;
+       box-sizing: inherit;
+  -webkit-transition-property: all;
+          transition-property: all;
+  -webkit-transition-duration: .6s;
+          transition-duration: .6s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+
+
+:root{
+ --background: #FFF2DF;
+ --blue: #41417F; 
+ --lightBlue: #A9C8D4;
+ --darkBackground: #F6E7D1;
+--darkBackground2: #ebdecc;
+--opacity: 0.5;
+}
+
+html{
+    overflow: unset !important;
+}
+
+body{
+    max-width: 100vw;
+       
+    margin: 0;   
+    font-family: 'Montserrat', sans-serif !important ;
+    /**background-color: var(--background) !important;**/
+    /**background-image: linear-gradient(to right top, #fff2df, #ffdfd4, #f6ced5, #dfc2db, #babade);**/
+    background-image: url("../asset/img/Brazuca - Planning.png"), linear-gradient(to right top, rgba(255,242,223,var(--opacity)), rgba(255,223,212,var(--opacity)),rgba(246,206,213,var(--opacity)), rgba(223,194,219,var(--opacity)), rgba(186,186,222,var(--opacity)));
+    background-repeat: no-repeat;
+    background-position: right;
+   
+   
+}
+html a {
+        text-decoration: none ;
+}
+
+header{
+          display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vh 15vh 0 15vh;
+    
+        
+}
+header a {
+        color: var(--blue);
+        font-weight: 600;
+        margin: 0vh 2vh 0 2vh;
+        font-size: small;
+}
+
+header a img{
+        height: 20vh;
+}
+
+
+/** Slogan**/
+
+
+h2{
+        font-family: 'Amatic SC', sans-serif !important ;
+        color: var(--blue);       
+        font-size: xxx-large;
+        text-align: center;   
+}
+
+
+.slogan{
+        font-family: 'Amatic SC', sans-serif !important ;
+        color: var(--blue);       
+        font-size: xxx-large;
+        text-align: center;
+}
+
+.slogan span{
+        font-size: xx-large;
+}
+
+
+/** Bouton header profil **/
+
+.btn{
+        cursor: pointer;
+}
+
+.btn:hover{
+        background-color: var(--blue) !important;
+        color:white !important; 
+
+}
+
+.btn-profil{
+        border-radius: 5vh 5vh 5vh 5vh !important;
+        background-color: transparent !important; 
+        border: 2px solid !important;
+        border-color: var(--blue) !important;
+        font-family: 'Montserrat', sans-serif ;
+        font-weight: 600;
+        color: var(--blue) !important;
+        padding: 2vh; 
+        
+}
+
+.btn-profil:hover{
+        background-color: var(--blue) ! important;
+        color: white !important;
+}
+
+
+/**modification du dropdown de connexion**/
+
+    .dropdown-menu {
+            padding: 1vh !important;
+            background-color: var(--background);
+            font-weight: 600;
+            border-radius: 5vh 5vh 5vh 5vh !important;
+            border: 2px solid !important;
+            border-color: var(--blue) !important;
+
+    }
+
+    /*input research*/
+    .research-section{
+            display:flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+            margin-top: -5vh; 
+            margin-bottom: 10vh;
+    }
+    .inputResearch {
+            width: 100vh;
+            border-color: #adadad !important;
+            color: #bfbfbf !important;
+            margin-bottom: 5vh;
+            font-size: 1rem !important;
+            height: 5vh;
+    }
+    .research-section button{
+            cursor: pointer; 
+    }
+
+
+    /*class globale*/
+    .roundRadius{
+        padding: 1vh !important;
+        border-radius: 5vh 5vh 5vh 5vh !important;
+        border: 1px solid !important;
+       
+    }
+    .roundRadiusNoBorder{
+        border-radius: 5vh 5vh 5vh 5vh !important;
+    
+    }
+
+    .SB20{
+            width: 20vh !important;
+    }
+
+    .SB30{
+        width: 30vh !important;
+    }
+
+    .flex-spaceb{
+            display: flex;
+            justify-content: space-between;
+    }
+
+    .centered{
+            align-items: center;
+    }
+
+    .bg-blue{
+            background-color: var(--lightBlue) !important;
+            color: white; 
+    }
+
+    .montserrat-normal{
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 400 !important;
+
+    }
+
+    .H5{
+            height: 5vh;
+    }
+
+    /** affichage produits **/
+
+    .produits{
+        background-color: white;
+        width:100vw;  
+        display: flex;
+        flex-direction: column;
+        align-items: center;       
+        
+    }
+
+    .containerArticle{  
+	    max-width: 60vw;
+	    display: flex;
+	    margin: auto;
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	    align-items: center;
+	    justify-content: space-around;
+	    margin-bottom: 50px;
+      
+    }
+    
+    .container-btn{
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    }
+    
+     .containerArticles{  
+	    max-width: 100vw;
+	    display: flex;
+	    margin: auto;
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	    align-items: center;
+	    justify-content: center;
+	    margin-bottom: 50px;
+      
+    }
+
+    .article{
+            background-color: var(--darkBackground); 
+            display: flex;
+            flex-direction: row;
+            min-width: 450px; 
+            height: 30vh; 
+            margin: 2vh;
+    }
+
+    .article img{
+            height: inherit; 
+    }
+
+    .descriptionArticle{
+            line-height: 0.5em;
+            margin-left: 1vh;
+            color: var(--blue);
+    }
+
+    .divider{
+            background-color: var(--darkBackground);
+            height: 2px; 
+            width : 20vw;
+            margin: 10px;  
+    }
+
+    .btnUtilisateurArticle{
+    		margin-top: 30px;
+    }
+
+    footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+             background-color: var(--background);  
+                            
+             max-width: 100vw; 
+             
+        }
+
+        .logo-footer{
+                height: 15vh;
+        }
+        
+    .info-utilisateur{
+    
+    margin: auto;
+    width: 200px;
+    }    
+
+    .container{
+            margin-left: 25px;
+            width: 100vw; 
+    }
+
+    .flexRow{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+    }

@@ -1,0 +1,61 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    
+    
+    
+<script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>	
+
+
+    <script type="text/javascript">
+        $(window).on('load', function(){
+        setTimeout(removeLoader, 1000); //wait for page load PLUS two seconds.
+        });
+        function removeLoader(){
+            $( ".loader-wrapper" ).fadeOut(500, function() {
+            // fadeOut complete. Remove the loading div
+            $( ".loader-wrapper" ).remove(); //makes page more lightweight 
+            });   
+            }
+    </script>
+<script>
+let checkboxVente = document.getElementsByClassName("VenteCheckBox"); 
+let checkboxEnchere = document.getElementsByClassName("EnchereCheckBox"); 
+var achatRadio = document.getElementById("achat");
+var venteRadio = document.getElementById("vente");
+
+for(var index=0;index < checkboxVente.length;index++){
+    checkboxVente[index].addEventListener("click", function() { Uncheck(checkboxEnchere); UncheckRadio(achatRadio); checkRadio(venteRadio) }, false);
+    //console.log("index vente: " + index + " ok");
+   }
+
+   for(var index=0;index < checkboxEnchere.length;index++){
+    checkboxEnchere[index].addEventListener("click", function() { Uncheck(checkboxVente); UncheckRadio(venteRadio); checkRadio(achatRadio) }, false);
+    //console.log("index Enchere: " + index + " ok");
+   }
+
+function UncheckRadio(radio){
+    radio.checked = false;
+}
+
+function checkRadio(radio){
+    radio.checked = true;
+}
+
+
+function Uncheck(checkbox) {
+    
+    for(var index=0;index < checkbox.length;index++){
+    
+    checkbox[index].checked = false;
+    //console.log("index decoche: " + index + " ok");
+   }
+}
+
+
+
+</script>
+    

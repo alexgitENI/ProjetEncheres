@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+
+
+<Resource name="jdbc/eniencheres_bdd"
+
+
+auth="Container"
+
+type="javax.sql.DataSource"
+username="270326_dev"
+password="r9RT3iTMADiY8PYn"
+
+driverClassName="com.mysql.cj.jdbc.Driver"
+
+url="jdbc:mysql://mysql-eniencheres.alwaysdata.net/eniencheres_bdd"
+
+maxActive="15"
+
+maxTotal="100"
+maxIdle="30"
+maxWaitMillis="10000"
+
+/>
+
+</Context>
+

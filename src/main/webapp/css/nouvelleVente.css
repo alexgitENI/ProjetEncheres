@@ -1,0 +1,36 @@
+.formNouvelleVente{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.maxWidth{
+    width: 100%;
+}
+
+.formNouvelleVente input{
+    margin-top: 5px; 
+    margin-bottom: 5px;
+}
+
+.maxWidth .input-field{
+ width: 100%; 
+}
+
+textarea{
+    height: 15vh; 
+}
+
+.SB15{
+    width: 20vh; 
+}
+
